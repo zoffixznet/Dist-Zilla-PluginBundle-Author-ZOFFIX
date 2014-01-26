@@ -83,7 +83,7 @@ sub configure {
         ],
         [
             CopyFilesFromRelease => {
-                filename => [qw/README.md  LICENSE  CONTRIBUTING/],
+                filename => [qw/README.md/],
             },
         ],
         'TestRelease',
@@ -201,8 +201,6 @@ and is approximately equivalent to the following C<dist.ini>:
 
     [CopyFilesFromRelease]
     filename = README.md
-    filename = LICENSE
-    filename = CONTRIBUTING
 
     [TestRelease]
 

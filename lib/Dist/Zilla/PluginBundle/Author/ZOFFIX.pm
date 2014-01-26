@@ -136,6 +136,9 @@ and is approximately equivalent to the following C<dist.ini>:
     check_all_plugins = 1
     check_all_prereqs = 1
     fatal             = 1
+    skip              = IPC::Open3
+    skip              = strict
+    skip              = warnings
 
     [GatherDir]
     [PruneCruft]

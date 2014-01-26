@@ -19,6 +19,7 @@ sub configure {
                 check_all_plugins => 1,
                 check_all_prereqs => 1,
                 fatal             => 1,
+                skip              => [qw/strict  warnings  base/],
             }
         ],
         qw/GatherDir

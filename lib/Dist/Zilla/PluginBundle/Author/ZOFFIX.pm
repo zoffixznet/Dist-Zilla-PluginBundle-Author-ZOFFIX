@@ -236,8 +236,9 @@ Zoffix Znet <zoffix at cpan.org>
 
 =head1 LICENSE
 
-You can use and distribute this module under the same terms as Perl itself.
-See the C<LICENSE> file included in this distribution for complete
-details.
+This software is copyright (c) 2014 by Zoffix Znet <zoffix at cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

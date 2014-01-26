@@ -1,4 +1,7 @@
 Revision history for Perl extension Dist-Zilla-PluginBundle-Author-ZOFFIX
 
+1.001002   2014-01-26
+    - Removed 'fatal' option from PromptIfStale plugin
+
 1.001001   2014-01-26
     - First version, released on an unsuspecting world

@@ -1,0 +1,243 @@
+package Dist::Zilla::PluginBundle::Author::ZOFFIX;
+
+# VERSION
+
+use Moose;
+with 'Dist::Zilla::Role::PluginBundle::Easy';
+
+=for Pod::Coverage configure
+
+=cut
+
+sub configure {
+    my $self = shift;
+
+    $self->add_plugins(
+        'OurPkgVersion',
+        [
+            PromptIfStale => {
+                check_all_plugins => 1,
+                check_all_prereqs => 1,
+                fatal             => 1,
+            }
+        ],
+        qw/GatherDir
+        PruneCruft
+        ManifestSkip
+        MetaYAML
+        License
+        Readme
+        ExecDir
+        ShareDir
+        MakeMaker
+        Manifest
+        AutoPrereqs
+        MetaConfig
+        Prereqs::AuthorDeps
+        MinimumPerl
+        MetaProvides::Package
+        GithubMeta
+        InstallGuide/,
+        [
+            ReadmeAnyFromPod => {
+                type     => 'markdown',
+                filename => 'README.md',
+            },
+        ],
+        qw/Test::Compile
+        Test::DistManifest
+        Test::EOL
+        Test::Version
+        Test::Kwalitee::Extra
+        MetaTests
+        Test::CPAN::Meta::JSON
+        MojibakeTests
+        NoTabsTests
+        PodCoverageTests
+        PodSyntaxTests
+        Test::Portability
+        Test::Synopsis
+        Test::UnusedVars
+        Test::Pod::LinkCheck
+        Test::CPAN::Changes
+        Test::PodSpelling
+        CheckSelfDependency
+        CheckPrereqsIndexed/,
+        [
+            'Test::MinimumVersion' => {
+                max_target_perl => '5.008008',
+            },
+        ],
+        [
+            'Git::NextVersion' => {
+                first_version => '1.001001',
+                version_regexp => '^v(.+)$',
+            },
+        ],
+        [
+            AutoMetaResources => {
+                'bugtracker.github' => 'user:zoffixznet',
+                'repository.github' => 'user:zoffixznet',
+                homepage => 'http://metacpan.org/release/%{dist}',
+            },
+        ],
+        [
+            CopyFilesFromRelease => {
+                filename => [qw/README.md  LICENSE  CONTRIBUTING/],
+            },
+        ],
+        'TestRelease',
+        [
+            InstallRelease => {
+                install_command => 'cpanm .',
+            },
+        ],
+        qw/ConfirmRelease
+        Git::Check
+        Git::Commit
+        Git::Tag
+        Git::Push
+        UploadToCPAN/,
+    );
+}
+
+
+q|
+99 little bugs in the code
+99 bugs in the code
+patch one down, compile it around
+117 bugs in the code
+|;
+
+__END__
+
+=encoding utf8
+
+=head1 NAME
+
+Dist::Zilla::PluginBundle::Author::ZOFFIX - A plugin bundle for distributions built by ZOFFIX
+
+=head1 SYNOPSIS
+
+In your C<dist.ini>:
+
+    [@Author::ZOFFIX]
+
+=head1 DESCRIPTION
+
+This is a L<Dist::Zilla> plugin bundle. It is heavily based on
+L<Dist::Zilla::PluginBundle::Author::ETHER>
+and is approximately equivalent to the following C<dist.ini>:
+
+    [OurPkgVersion]
+
+    [PromptIfStale]
+    check_all_plugins = 1
+    check_all_prereqs = 1
+    fatal             = 1
+
+    [GatherDir]
+    [PruneCruft]
+    [ManifestSkip]
+    [MetaYAML]
+    [License]
+    [Readme]
+    [ExecDir]
+    [ShareDir]
+    [MakeMaker]
+    [Manifest]
+
+    [ReadmeAnyFromPod]
+    type = markdown
+    filename = README.md
+
+    [Test::Compile]
+    [Test::DistManifest]
+    [Test::EOL]
+    [Test::Version]
+    [Test::Kwalitee::Extra]
+    [MetaTests]
+    [Test::CPAN::Meta::JSON]
+    [Test::MinimumVersion]
+    max_target_perl = 5.008008
+
+    [MojibakeTests]
+    [NoTabsTests]
+    [PodCoverageTests]
+    [PodSyntaxTests]
+    [Test::Portability]
+    [Test::Synopsis]
+    [Test::UnusedVars]
+    [Test::Pod::LinkCheck]
+    [Test::CPAN::Changes]
+    [Test::PodSpelling]
+
+    [Git::NextVersion]
+    first_version = 1.001001
+    version_regexp = ^v(.+)$
+
+    [AutoPrereqs]
+
+    [MetaConfig]
+
+    [Prereqs::AuthorDeps]
+    [MinimumPerl]
+
+    [MetaProvides::Package]
+
+    [GithubMeta]
+
+    [AutoMetaResources]
+    bugtracker.github = user:zoffixznet
+    repository.github = user:zoffixznet
+    homepage = http://metacpan.org/release/%{dist}
+
+    [InstallGuide]
+
+    [CheckSelfDependency]
+    [CheckPrereqsIndexed]
+
+    [CopyFilesFromRelease]
+    filename = README.md
+    filename = LICENSE
+    filename = CONTRIBUTING
+
+    [TestRelease]
+
+    [InstallRelease]
+    install_command = cpanm .
+
+    [ConfirmRelease]
+
+    [Git::Check]
+    [Git::Commit]
+    [Git::Tag]
+    [Git::Push]
+
+    [UploadToCPAN]
+
+=head1 REPOSITORY
+
+Fork this module on GitHub:
+L<https://github.com/zoffixznet/Dist-Zilla-PluginBundle-Author-ZOFFIX>
+
+=head1 BUGS
+
+To report bugs or request features, please use
+L<https://github.com/zoffixznet/Dist-Zilla-PluginBundle-Author-ZOFFIX/issues>
+
+If you can't access GitHub, you can email your request
+to C<bug-Dist-Zilla-PluginBundle-Author-ZOFFIX at rt.cpan.org>
+
+=head1 AUTHOR
+
+Zoffix Znet <zoffix at cpan.org>
+(L<http://zoffix.com/>, L<http://haslayout.net/>)
+
+=head1 LICENSE
+
+You can use and distribute this module under the same terms as Perl itself.
+See the C<LICENSE> file included in this distribution for complete
+details.
+
+=cut

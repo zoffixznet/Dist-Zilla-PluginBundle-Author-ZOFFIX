@@ -3,6 +3,8 @@ Revision history for Perl extension Dist-Zilla-PluginBundle-Author-ZOFFIX
 1.001003   2014-02-01
     - Fixes Issue #1 (Missing prepreqs for plugins in the bundle)
        https://github.com/zoffixznet/Dist-Zilla-PluginBundle-Author-ZOFFIX/issues/1
+    - Fixes Issue #2 (PromptIfStale -> core stuff)
+       https://github.com/zoffixznet/Dist-Zilla-PluginBundle-Author-ZOFFIX/issues/2
 
 1.001002   2014-01-26
     - Removed 'fatal' option from PromptIfStale plugin

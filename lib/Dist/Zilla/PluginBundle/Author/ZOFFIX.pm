@@ -141,9 +141,12 @@ and is approximately equivalent to the following C<dist.ini>:
     [PromptIfStale]
     check_all_plugins = 1
     check_all_prereqs = 1
-    skip              = IPC::Open3
     skip              = strict
     skip              = warnings
+    skip              = base
+    skip              = ExtUtils::MakeMaker
+    skip              = IPC::Open3
+    skip              = File::Copy
 
     [GatherDir]
     [PruneCruft]

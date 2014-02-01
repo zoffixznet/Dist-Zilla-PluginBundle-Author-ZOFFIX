@@ -22,7 +22,10 @@ sub configure {
             PromptIfStale => {
                 check_all_plugins => 1,
                 check_all_prereqs => 1,
-                skip              => [qw/strict  warnings  base/],
+                skip              => [qw/
+                    strict  warnings  base
+                    ExtUtils::MakeMaker  IPC::Open3  File::Copy
+                /],
             }
         ],
         qw/GatherDir

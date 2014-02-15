@@ -1,6 +1,9 @@
 Revision history for Perl extension Dist-Zilla-PluginBundle-Author-ZOFFIX
 
-1.002001   2014-02-14
+1.001006   2014-02-14
+    - Fixed #4 and #5
+
+1.001005   2014-02-14
     - Added Pod::Spiffy in the list of included plugins
 
 1.001003   2014-02-01

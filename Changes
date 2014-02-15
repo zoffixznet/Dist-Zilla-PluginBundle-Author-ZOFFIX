@@ -1,5 +1,8 @@
 Revision history for Perl extension Dist-Zilla-PluginBundle-Author-ZOFFIX
 
+1.002001   2014-02-14
+    - Added Pod::Spiffy in the list of included plugins
+
 1.001003   2014-02-01
     - Fixes Issue #1 (Missing prepreqs for plugins in the bundle)
        https://github.com/zoffixznet/Dist-Zilla-PluginBundle-Author-ZOFFIX/issues/1

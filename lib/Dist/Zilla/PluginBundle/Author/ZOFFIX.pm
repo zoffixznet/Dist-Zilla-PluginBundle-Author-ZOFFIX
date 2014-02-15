@@ -18,6 +18,7 @@ sub configure {
 
     $self->add_plugins(
         'OurPkgVersion',
+        'Pod::Spiffy',
         [
             PromptIfStale => {
                 check_all_plugins => 1,
@@ -137,6 +138,7 @@ L<Dist::Zilla::PluginBundle::Author::ETHER>
 and is approximately equivalent to the following C<dist.ini>:
 
     [OurPkgVersion]
+    [Pod::Spiffy]
 
     [PromptIfStale]
     check_all_plugins = 1

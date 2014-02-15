@@ -56,7 +56,7 @@ sub configure {
         Test::DistManifest
         Test::EOL
         Test::Version
-        Test::Kwalitee::Extra
+        Test::Kwalitee
         MetaTests
         Test::CPAN::Meta::JSON
         MojibakeTests
@@ -169,7 +169,7 @@ and is approximately equivalent to the following C<dist.ini>:
     [Test::DistManifest]
     [Test::EOL]
     [Test::Version]
-    [Test::Kwalitee::Extra]
+    [Test::Kwalitee]
     [MetaTests]
     [Test::CPAN::Meta::JSON]
     [Test::MinimumVersion]

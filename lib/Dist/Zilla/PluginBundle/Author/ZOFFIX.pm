@@ -44,7 +44,6 @@ sub configure {
         Prereqs::AuthorDeps
         MinimumPerl
         MetaProvides::Package
-        GithubMeta
         InstallGuide/,
         [
             ReadmeAnyFromPod => {
@@ -85,6 +84,7 @@ sub configure {
         [
             AutoMetaResources => {
                 'bugtracker.github' => 'user:zoffixznet',
+                'bugtracker.mailto' => 'cpan@zoffix.com',
                 'repository.github' => 'user:zoffixznet',
                 homepage => 'http://metacpan.org/release/%{dist}',
             },

@@ -59,7 +59,7 @@ sub configure {
         MetaTests
         Test::CPAN::Meta::JSON
         MojibakeTests
-        NoTabsTests
+        Test::NoTabs
         PodCoverageTests
         PodSyntaxTests
         Test::Portability
@@ -176,7 +176,7 @@ and is approximately equivalent to the following C<dist.ini>:
     max_target_perl = 5.008008
 
     [MojibakeTests]
-    [NoTabsTests]
+    [Test::NoTabs]
     [PodCoverageTests]
     [PodSyntaxTests]
     [Test::Portability]

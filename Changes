@@ -1,5 +1,8 @@
 Revision history for Perl extension Dist-Zilla-PluginBundle-Author-ZOFFIX
 
+1.001008   2015-03-09
+    - Fixed #7: Deprecated 'NoTabsTests' plugin
+
 1.001007   2015-03-05
     - Resolve conflict between GithubMeta and AutoMetaResources that came up
         during the lastest Dist::Zilla update

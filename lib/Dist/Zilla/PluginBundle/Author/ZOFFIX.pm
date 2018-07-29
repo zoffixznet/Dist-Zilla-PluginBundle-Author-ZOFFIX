@@ -33,6 +33,7 @@ sub configure {
         PruneCruft
         ManifestSkip
         MetaYAML
+        MetaJSON
         License
         Readme
         ExecDir
